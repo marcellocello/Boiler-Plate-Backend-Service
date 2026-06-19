@@ -1,0 +1,11 @@
+node_modules/
+*.log
+
+# env -- hanya .env.development yang masuk git
+.env
+.env.staging
+.env.production
+
+dist/
+.DS_Store
+package-lock.json
