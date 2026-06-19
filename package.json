@@ -15,7 +15,12 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development node --watch src/server.js",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "migrate:postgres": "node --env-file=.env.development scripts/migrate.js postgres",
+    "migrate:mysql": "node --env-file=.env.development scripts/migrate.js mysql",
+    "migrate:mongo": "node --env-file=.env.development scripts/migrate.js mongo",
+    "migrate": "node --env-file=.env.development scripts/migrate.js all",
+    "generate:keys": "node --env-file=.env.development scripts/generate-keys.js"
   },
   "keywords": [
     "backend",
